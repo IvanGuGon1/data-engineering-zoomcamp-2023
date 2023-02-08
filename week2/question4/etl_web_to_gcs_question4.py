@@ -62,3 +62,4 @@ def etl_web_to_gcs() -> None:
 
 if __name__ == "__main__":
     etl_web_to_gcs()
+

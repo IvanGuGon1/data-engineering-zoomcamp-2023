@@ -1,0 +1,3 @@
+- prefect deployment build ./etl_gcs_to_bq.py:etl_parent_flow_homework -n "exercise-3-c" 
+- prefect deployment apply etl_parent_flow_homework-deployment.yaml 
+- prefect deployment run etl-parent-flow-homework/exercise-3-c --param months=[2,3] --param year=2019 --param color=yellow
