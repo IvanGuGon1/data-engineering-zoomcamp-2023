@@ -41,9 +41,40 @@ SELECT CAST(EXTRACT(YEAR from tpep_pickup_datetime) as string),count(*) FROM `dt
 
 4)
 
+C ) 88,605
+
 prefect deployment build -n gh -q prod -sb github/github-block --apply week2/question4/etl_web_to_gcs_question4py:etl_web_to_gcs
 
 prefect deployment build week2/question4/etl_web_to_gcs_question4py:etl_web_to_gcs --name "Question4_Github" --tag github-block -sb github/github-block  -a
 
 
 prefect deployment build path/to/flow.py:flow_name --name deployment_name --tag dev -sb github/dev -a
+ployment build etl_web_to_gcs_question4.py:etl_web_to_gcs --name "Github deploy" --tag github-block -sb github/github-block -a
+
+otra forma 
+
+  869  python etl_web_to_gcs_question4.py 
+  870  prefect deployment run etl-web-to-gcs
+  871  prefect deployment run "etl-web-to-gcs/Question 4 deployment"
+
+
+  5) 
+  D) 514,392
+
+ - Se hace login a prefect cloud
+ - Instalamos el block de slack
+ - Usamos el código que nos genera para emitir las notificaciones.
+ - Creamos la automatización para notificar success en nuestro deployment, o bien la notificacion.
+ - Hacemos un build, apply and run del deplyment "Question 4 deployment"
+ - Creamos una app customizada, permitimos webhooks, y usamos ese webhooks en nuestro bloque de prefect 
+   Ver en https://api.slack.com/messaging/webhooks. https://hooks.slack.com/services/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
+
+  prefect deployment build ./etl_web_to_gcs_question5.py:etl_web_to_gcs -n "Question 5 notification"
+    prefect deployment apply etl_parent_flow_homework-deployment.yaml 
+    prefect deployment run "etl-web-to-gcs/Question 5 notification" 
+
+
+###Question 6. Secrets
+ - Go to blocks, add secret block and set a secret name and password.
+ 
+- C) 8 
