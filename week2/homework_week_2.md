@@ -3,7 +3,7 @@
 
 ## Question 1. Load January 2020 data
 
-A) 
+A) 447770
 
 ```
 python etl_web_to_gcs.py
