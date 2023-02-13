@@ -1,0 +1,57 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow-week3-exercise'
+###
+name: ETL week3 exercises
+description: null
+version: 86df2c04cddb2bfca3703d121d617902
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow-week3-exercise
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 63c05ea7-a215-4dc0-aa60-a524f4ad64ed
+  _block_document_name: anonymous-f383127a-888d-416b-81cd-1f45cb21575f
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /home/ivang/datatalks/data-engineering-zoomcamp/homework/data-engineering-zoomcamp-2023/week3
+entrypoint: etl_web_to_gcs.py:etl_parent_flow_week3_exercise
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    months:
+      title: months
+      default:
+      - 1
+      - 2
+      position: 0
+      type: array
+      items:
+        type: integer
+    year:
+      title: year
+      default: 2019
+      position: 1
+      type: integer
+  required: null
+  definitions: null
+timestamp: '2023-02-13T20:10:45.274643+00:00'
