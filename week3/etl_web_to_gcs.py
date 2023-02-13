@@ -57,5 +57,5 @@ def etl_parent_flow_week3_exercise(
 
 if __name__ == "__main__":
     year = 2019
-    month = [1,2,3,4,5,6,7,8,9,10,11,12]
-    etl_parent_flow_week3_exercise(month,year)
+    months = [1,2,3,4,5,6,7,8,9,10,11,12]
+    etl_parent_flow_week3_exercise(months,year)
