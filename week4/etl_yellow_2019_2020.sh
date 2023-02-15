@@ -1,0 +1,7 @@
+array=(01 02 03 04 05 06 07 08 09 10 11 12)
+for i in "${array[@]}"
+do
+    wget -c "https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-"$i".csv.gz"
+
+    gsutil cp "yellow_tripdata_2019-"$i".csv.gz" gs://prefect-zoomcamp-ivang/data/yellow
+done
