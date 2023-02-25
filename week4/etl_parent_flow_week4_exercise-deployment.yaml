@@ -1,0 +1,54 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow-week4-exercise'
+###
+name: ETL Deploy for Homework Exercise 4 web to gcs parquet files
+description: null
+version: 502949c01bc270751d49ed3fc34e880a
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow-week4-exercise
+manifest_path: null
+storage: null
+path: /home/ivang/datatalks/data-engineering-zoomcamp/homework/data-engineering-zoomcamp-2023/week4
+entrypoint: etl_web_to_gcs_fhv.py:etl_parent_flow_week4_exercise
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    months:
+      title: months
+      default:
+      - 1
+      - 2
+      position: 0
+      type: array
+      items:
+        type: integer
+    year:
+      title: year
+      default: 2019
+      position: 1
+      type: integer
+  required: null
+  definitions: null
+timestamp: '2023-02-21T19:13:07.215790+00:00'

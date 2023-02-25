@@ -1,0 +1,59 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow-local-to-gcs'
+###
+name: load parquet local files to bq
+description: null
+version: e570c027e8904c7d7e827b87010d95f6
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow-local-to-gcs
+manifest_path: null
+storage: null
+path: /home/ivang/datatalks/data-engineering-zoomcamp/homework/data-engineering-zoomcamp-2023/week4
+entrypoint: etl_gcs_bq.py:etl_parent_flow_local_to_gcs
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    color:
+      title: color
+      default: yellow
+      position: 0
+      type: string
+    year:
+      title: year
+      default: 2021
+      position: 1
+      type: integer
+    months:
+      title: months
+      default:
+      - 2
+      - 3
+      position: 2
+      type: array
+      items:
+        type: integer
+  required: null
+  definitions: null
+timestamp: '2023-02-22T00:14:37.450709+00:00'
