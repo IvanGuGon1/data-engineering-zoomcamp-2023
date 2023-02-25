@@ -45,4 +45,6 @@ My result is 17907149
 
 Create a dashboard with some tiles that you find interesting to explore the data. One tile should show the amount of trips per month, as done in the videos for fact_trips, based on the fact_fhv_trips table.
 
+See my dashboard in [Dashboard] (/homework_week4.pdf)
+
 C) January
